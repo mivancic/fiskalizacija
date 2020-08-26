@@ -120,7 +120,7 @@ class Fiskalizacija
         $X509IssuerNameNode = new DOMElement('X509IssuerName', $X509IssuerName);
         $X509IssuerSerialNode->appendChild($X509IssuerNameNode);
 
-        $X509SerialNumberNode = new DOMElement('X509SerialNumber', $X509IssuerSerial);
+        $X509SerialNumberNode = new DOMElement('X509SerialNumber', sprintf('%u', hexdec($X509IssuerSerial)));
         $X509IssuerSerialNode->appendChild($X509SerialNumberNode);
 
         $envelope = new DOMDocument();
