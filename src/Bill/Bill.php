@@ -27,7 +27,7 @@ class Bill
 
     public $taxFreeValue;
 
-    public $refund = [];
+    public $refund = array();
 
     public $totalValue;
 
